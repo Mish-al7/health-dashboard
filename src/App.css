@@ -1,161 +1,111 @@
-/* Dr Health App CSS - Medical Interface Style */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  background: #f8fafc;
-  color: #1a202c;
-  line-height: 1.6;
-}
-
+/* App.css */
 .app {
   min-height: 100vh;
-  background: #f8fafc;
+  background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 2rem 1rem;
 }
 
-/* Header Section - Dr Health Style */
+/* Header */
 .header {
-  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
-  border-radius: 16px;
-  padding: 40px 32px;
-  margin-bottom: 32px;
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
-
-.header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  transform: translate(100px, -100px);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .main-title {
   font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-  letter-spacing: -0.02em;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  font-weight: 400;
-  margin-bottom: 16px;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
 }
 
 .live-status {
-  display: inline-flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  padding: 8px 16px;
-  border-radius: 24px;
+  color: #059669;
+  font-weight: 600;
   font-size: 0.875rem;
-  font-weight: 500;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 0.5rem;
 }
 
-/* Section Headers */
+/* Section */
 .section {
-  margin-bottom: 32px;
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
 }
 
 .section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #374151;
-  margin-bottom: 16px;
 }
 
 .section-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-  color: #0d9488;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  color: #2563eb;
 }
 
-/* Device Cards - Medical App Style */
+/* Device Cards */
 .devices-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 16px;
-  margin-bottom: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
 }
 
 .device-card {
   background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   border: 1px solid #e5e7eb;
-  transition: all 0.2s ease;
-}
-
-.device-card:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transform: translateY(-1px);
 }
 
 .device-info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .device-icon-name {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .device-icon {
-  width: 36px;
-  height: 36px;
-  padding: 8px;
-  border-radius: 8px;
-  background: #f3f4f6;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .device-icon.connected {
-  color: #059669;
-  background: #d1fae5;
+  color: #10b981;
 }
 
 .device-icon.disconnected {
-  color: #dc2626;
-  background: #fee2e2;
+  color: #9ca3af;
 }
 
 .device-name {
-  font-size: 0.975rem;
-  font-weight: 600;
-  color: #111827;
-  margin-bottom: 2px;
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0;
 }
 
 .device-status {
   font-size: 0.875rem;
-  font-weight: 500;
+  margin: 0;
 }
 
 .connected-text {
@@ -163,7 +113,7 @@ body {
 }
 
 .disconnected-text {
-  color: #dc2626;
+  color: #6b7280;
 }
 
 .device-details {
@@ -173,194 +123,174 @@ body {
 .sync-time, .battery-level {
   font-size: 0.75rem;
   color: #6b7280;
-  margin-bottom: 2px;
+  margin: 0;
 }
 
-.battery-level {
-  color: #059669;
-  font-weight: 500;
-}
-
-/* Data Stream Terminal */
+/* Data Stream */
 .data-stream {
-  background: #1f2937;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 24px;
-  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  background: #000;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #10b981;
+  font-family: monospace;
+  font-size: 0.875rem;
+  overflow: hidden;
 }
 
 .stream-content {
-  font-size: 0.8125rem;
-  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .stream-line {
-  color: #10b981;
-  margin-bottom: 2px;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .stream-listening {
-  color: #fbbf24;
-  font-weight: 500;
+  color: #34d399;
+  animation: pulse 2s infinite;
 }
 
-/* Health Status Card - Dr Health Style */
+/* Health Status */
 .health-status {
-  margin-bottom: 32px;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
 }
 
 .status-card {
   background: white;
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
 }
 
 .status-content {
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 .status-icon {
-  width: 56px;
-  height: 56px;
-  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.status-text {
+  text-align: center;
 }
 
 .status-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 4px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-transform: capitalize;
+  margin: 0;
 }
 
 .status-message {
-  font-size: 1rem;
   font-weight: 500;
+  margin: 0;
 }
 
-/* Vitals Cards - Medical Dashboard Style */
+.text-green-600 {
+  color: #059669;
+}
+
+.text-yellow-600 {
+  color: #d97706;
+}
+
+.text-red-600 {
+  color: #dc2626;
+}
+
+/* Vitals Grid */
 .vitals-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-  margin-bottom: 32px;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .vital-card {
   background: white;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  border: 1px solid #e5e7eb;
-  border-left: 4px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-left: 4px solid;
   position: relative;
-  transition: all 0.2s ease;
-}
-
-.vital-card:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .live-indicator {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 0.5rem;
+  right: 0.5rem;
   display: flex;
   align-items: center;
-  gap: 4px;
-  background: #fef2f2;
-  color: #dc2626;
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 0.625rem;
-  font-weight: 600;
-  border: 1px solid #fecaca;
+  gap: 0.25rem;
 }
 
 .live-dot {
-  width: 6px;
-  height: 6px;
-  background: #dc2626;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #ef4444;
   border-radius: 50%;
   animation: pulse 2s infinite;
 }
 
 .live-text {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  font-size: 0.75rem;
+  color: #6b7280;
 }
 
 .vital-content {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 16px;
 }
 
 .vital-info {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex: 1;
-  min-width: 0;
+  gap: 0.75rem;
 }
 
 .vital-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  padding: 0.75rem;
+  border-radius: 50%;
 }
 
 .vital-icon .icon {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .vital-title {
   font-size: 0.875rem;
   font-weight: 500;
   color: #6b7280;
-  margin-bottom: 4px;
+  margin: 0;
 }
 
 .vital-value {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: #111827;
-  line-height: 1;
-}
-
-.vital-status {
-  align-self: flex-start;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0;
 }
 
 .status-badge {
-  padding: 4px 8px;
-  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
   font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
+  font-weight: 500;
 }
 
 .status-badge.normal {
-  background: #d1fae5;
-  color: #065f46;
+  background: #dcfce7;
+  color: #166534;
 }
 
 .status-badge.warning {
@@ -368,234 +298,198 @@ body {
   color: #92400e;
 }
 
-.status-badge.high, .status-badge.low {
+.status-badge.low, .status-badge.high {
   background: #fee2e2;
   color: #991b1b;
 }
 
-/* Sync Section - Medical App Style */
+/* Sync Section */
 .sync-section {
   text-align: center;
-  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .sync-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  background: #2563eb;
   color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 0.9375rem;
   font-weight: 600;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 auto;
+  transition: background-color 0.2s;
 }
 
 .sync-button:hover:not(:disabled) {
-  background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background: #1d4ed8;
 }
 
 .sync-button:disabled {
-  opacity: 0.75;
+  background: #93c5fd;
   cursor: not-allowed;
 }
 
 .sync-icon {
-  width: 16px;
-  height: 16px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .sync-icon.spinning {
   animation: spin 1s linear infinite;
 }
 
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.sync-status {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-.sync-status {
-  margin-top: 16px;
-  background: white;
-  border-radius: 8px;
-  padding: 16px;
-  border: 1px solid #e5e7eb;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
+.sync-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
 }
 
 .sync-steps p {
-  font-size: 0.875rem;
-  color: #374151;
-  margin-bottom: 4px;
+  margin: 0;
 }
 
-/* Integration Section - Professional Medical Style */
+/* Integration Section */
 .integration-section {
-  margin-bottom: 32px;
+  margin-top: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .integration-card {
   background: white;
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
 }
 
 .integration-title {
-  font-size: 1.375rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .capabilities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
 .capability-item {
   text-align: center;
-  padding: 16px;
 }
 
 .capability-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 12px;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 16px;
-  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  margin: 0 auto 1rem auto;
 }
 
 .capability-icon.apple-watch {
-  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  background: #dbeafe;
+}
+
+.capability-icon.apple-watch .icon {
+  color: #2563eb;
+  width: 2rem;
+  height: 2rem;
 }
 
 .capability-icon.iphone {
-  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  background: #dcfce7;
+}
+
+.capability-icon.iphone .icon {
+  color: #059669;
+  width: 2rem;
+  height: 2rem;
 }
 
 .capability-icon.real-time {
-  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  background: #f3e8ff;
 }
 
-.capability-icon .icon {
-  width: 32px;
-  height: 32px;
-  color: white;
+.capability-icon.real-time .icon {
+  color: #7c3aed;
+  width: 2rem;
+  height: 2rem;
 }
 
 .capability-title {
-  font-size: 1.125rem;
   font-weight: 600;
-  color: #111827;
-  margin-bottom: 12px;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
 }
 
 .capability-list {
-  list-style: none;
-  text-align: left;
-}
-
-.capability-list li {
-  padding: 3px 0;
-  color: #6b7280;
   font-size: 0.875rem;
+  color: #6b7280;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-/* Color Utilities */
-.text-green-600 { color: #059669; }
-.text-yellow-600 { color: #d97706; }
-.text-red-600 { color: #dc2626; }
-
-/* Responsive Design - Medical App Standards */
-@media (max-width: 1024px) {
-  .container {
-    padding: 20px;
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
   }
-  
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .main-title {
     font-size: 2rem;
   }
   
-  .devices-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-}
-
-@media (max-width: 768px) {
   .container {
-    padding: 16px;
+    padding: 1rem;
   }
   
-  .header {
-    padding: 24px 20px;
-  }
-  
-  .main-title {
-    font-size: 1.75rem;
-  }
-  
-  .subtitle {
-    font-size: 1rem;
-  }
-  
-  .status-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 16px;
-  }
-  
-  .vital-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .vital-status {
-    align-self: stretch;
+  .vitals-grid {
+    grid-template-columns: 1fr;
   }
   
   .devices-grid {
     grid-template-columns: 1fr;
   }
   
-  .vitals-grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-}
-
-@media (max-width: 480px) {
-  .header {
-    padding: 20px 16px;
-  }
-  
-  .main-title {
-    font-size: 1.5rem;
-  }
-  
-  .device-card,
-  .vital-card {
-    padding: 16px;
-  }
-  
-  .status-card {
-    padding: 20px;
-  }
-  
-  .vitals-grid {
+  .capabilities-grid {
     grid-template-columns: 1fr;
   }
 }
