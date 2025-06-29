@@ -1,0 +1,3 @@
+[submodule "health-dashboard"]
+	path = health-dashboard
+	url = https://github.com/Mish-al7/health-dashboard.git
